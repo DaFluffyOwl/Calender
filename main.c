@@ -13,8 +13,7 @@ Sun    Mon    Tue     Wed    Thu     Fri    Sat
 char *days[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 char *currMonth[1] = {"January"};
 int year = 2023;
-int space = 4;
-int start_day = 1;
+int start_day = 3;
 
 void print_days();
 void print_date();
@@ -28,27 +27,18 @@ int main(){
 
 void print_days(){
     for(int i = 0; i < 7; i++){
-        printf("%s", days[i]);
-        for(int s = 0; s < space; s++){
-            printf(" ");
-        }
+        printf("%s\t", days[i]);
     }
     printf("\n");
 }
 
 void print_date(){
     int less_space = 0;
-    for(int d = 0; d < (start_day-1)*(space+3); d++){
-        printf(" ");
+    for(int d = 0; d < (start_day-1); d++){
+        printf("\t");
     }
     for(int x = 1; x <= 31; x++){
-        printf("%d", x);
-        if(x >= 10){
-            less_space = 1;
-        }
-        for(int s = 0; s < space+2-less_space; s++){
-            printf(" ");
-        }
+        printf("%d\t", x);
         if((x+start_day-1) % 7 == 0){
             printf("\n");
         }
