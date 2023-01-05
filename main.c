@@ -3,7 +3,7 @@
 char *day[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 char *month[1] = {"January"};
 int year = 2023;
-int start_day = 0;
+int start_day = 1;
 
 void print_days();
 void print_date();
@@ -31,7 +31,7 @@ void print_date(){
     //Prints each day number
     for(int x = 1; x <= 31; x++){
         printf("%d\t", x);
-        if((x+start_day) % 7 == 0){
+        if((x+start_day-1) % 7 == 0){
             printf("\n");
         }
     }
