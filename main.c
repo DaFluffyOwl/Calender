@@ -3,7 +3,7 @@
 char *days[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 char *currMonth[1] = {"January"};
 int year = 2023;
-int start_day = 1;
+int start_day = 2;
 
 void print_days();
 void print_date();
