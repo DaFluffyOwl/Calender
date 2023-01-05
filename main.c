@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-char *days[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-char *currMonth[1] = {"January"};
+char *day[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+char *month[1] = {"January"};
 int year = 2023;
-int start_day = 1;
+int start_day = 0;
 
 void print_days();
 void print_date();
 
 int main(){
-    printf("%s %d\n", currMonth[0], year);
+    printf("%s %d\n", month[0], year);
     print_days();
     print_date();
     printf("\n");
@@ -18,7 +18,7 @@ int main(){
 void print_days(){
     //Prints day names
     for(int i = 0; i < 7; i++){
-        printf("%s\t", days[i]);
+        printf("%s\t", day[i]);
     }
     printf("\n");
 }
@@ -31,7 +31,7 @@ void print_date(){
     //Prints each day number
     for(int x = 1; x <= 31; x++){
         printf("%d\t", x);
-        if((x+start_day-1) % 7 == 0){
+        if((x+start_day) % 7 == 0){
             printf("\n");
         }
     }
