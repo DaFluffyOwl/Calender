@@ -38,6 +38,9 @@ void print_days(){
 
 void print_date(){
     int less_space = 0;
+    for(int d = 0; d < (start_day-1)*(space+3); d++){
+        printf(" ");
+    }
     for(int x = 1; x <= 31; x++){
         printf("%d", x);
         if(x >= 10){
@@ -46,7 +49,7 @@ void print_date(){
         for(int s = 0; s < space+2-less_space; s++){
             printf(" ");
         }
-        if(x % 7 == 0){
+        if((x+start_day-1) % 7 == 0){
             printf("\n");
         }
     }
